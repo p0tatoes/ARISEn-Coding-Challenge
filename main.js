@@ -42,7 +42,7 @@ window.onload = () => {
         let in_gender = document.getElementById("in_Gender");
         let in_age = document.getElementById("in_Age");
 
-        if ((in_name != null && in_name != "") && (in_gender != null && (in_gender.value.toLowerCase() == "male" || in_gender.value.toLowerCase() == "female")) && (in_age != null && in_age != 0)) {
+        if ((in_name.value != null && in_name.value != "") && (in_gender.value != null && (in_gender.value.toLowerCase() == "male" || in_gender.value.toLowerCase() == "female")) && (in_age.value > 0)) {
             input.usr_names.push(in_name.value);
             input.usr_gender.push(in_gender.value);
             input.usr_age.push(in_age.value);
@@ -53,8 +53,7 @@ window.onload = () => {
 
     document.getElementById("btn_DelLine").addEventListener("click", () => {
         let removeLine = document.getElementById("in_DelLine").value - 1;
-        console.log(removeLine);
-        if (document.getElementById("in_DelLine").value > 0) {
+        if (document.getElementById("in_DelLine").value > 0 && input.usr_names.length > 0) {
             input.usr_names.splice(removeLine, 1);
             input.usr_gender.splice(removeLine, 1);
             input.usr_age.splice(removeLine, 1);
