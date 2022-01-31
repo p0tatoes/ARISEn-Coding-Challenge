@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+table, table * {
+    margin: 10px 10px;
+    border: 2px solid green;
+    border-collapse: collapse;
+    padding: 5px 10px;
+}
